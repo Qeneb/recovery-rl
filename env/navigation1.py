@@ -20,6 +20,7 @@ import matplotlib.patches as patches
 import numpy as np
 import io
 import cv2
+import random
 """
 Constants associated with the Navigation1 env.
 """
