@@ -68,6 +68,10 @@ class Navigation1(Env, utils.EzPickle):
         self.transition_function = get_offline_data
         self.goal = GOAL_STATE
 
+    def seed(self, seed=None):
+        random.seed(seed)
+        np.random.seed(seed)
+
     def step(self, a):
         a = process_action(a)
         old_state = self.state.copy()

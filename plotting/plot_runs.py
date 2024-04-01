@@ -317,6 +317,6 @@ def plot_experiment(experiment, logdir):
 
 
 if __name__ == '__main__':
-    experiment = "obj_extraction"  # ** insert experiment name here **
+    experiment = "navigation1"  # ** insert experiment name here **
     logdir = '/data/recovery-rl/obj_extraction'  # ** insert logdir here **
     plot_experiment(experiment, logdir)
