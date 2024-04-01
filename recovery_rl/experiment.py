@@ -432,7 +432,7 @@ class Experiment:
                 reward -= self.exp_cfg.constraint_reward_penalty
 
             mask = float(not done)
-            done = done or episode_steps == self.env._max_episode_steps
+            done = done or episode_steps == self.env.max_episode_steps
 
             # Update buffers
             if not self.exp_cfg.disable_action_relabeling:
@@ -511,7 +511,7 @@ class Experiment:
                                                                  train=False)
             next_state, reward, done, info = self.env.step(real_action)  # Step
             info['recovery'] = recovery_used
-            done = done or episode_steps == self.env._max_episode_steps
+            done = done or episode_steps == self.env.max_episode_steps
 
             if 'maze' in self.exp_cfg.env_name:
                 im_list.append(self.env._get_obs(images=True))
